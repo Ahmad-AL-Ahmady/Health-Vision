@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Sign-Up Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Section -->
+      <div class="left"></div>
+      <!-- Right Section -->
+      <div class="right">
+        <div class="logo-container">
+          <img src="logo.jpeg" alt="Logo" class="logo" />
+          <h1 class="logo-text">Health Vision</h1>
+        </div>
+        <h3>Sign Up</h3>
+        <form id="signupForm">
+          <!-- Username Field -->
+          <div class="form-group icon-input">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <!-- Email Field -->
+          <div class="form-group icon-input">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <!-- Password Field -->
+          <div class="form-group icon-input">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <!-- Phone Number Field -->
+          <div class="form-group icon-input">
+            <i class="fa-solid fa-phone"></i>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+              required
+              pattern="[0-9]{10}"
+            />
+          </div>
+          <!-- Usertype Dropdown -->
+          <div class="form-group icon-input">
+            <i class="fas fa-user-tag"></i>
+            <select id="usertype" name="usertype" required>
+              <option value="">Select Usertype</option>
+              <option value="doctor">
+                <i class="fa-solid fa-user-doctor"></i>Doctor
+              </option>
+              <option value="pharmacy">
+                <i class="fa-solid fa-capsules"></i>Pharmacy
+              </option>
+              <option value="user">
+                <i class="fa-solid fa-user-tie"></i>User
+              </option>
+            </select>
+          </div>
+          <!-- Location Button -->
+          <div class="form-group hidden" id="location-group">
+            <button type="button" id="locationButton" class="btn location-btn">
+              <i class="fa-solid fa-map-location-dot"></i>
+              Add Location
+            </button>
+            <p id="locationDisplay" class="location-display"></p>
+          </div>
+          <!-- Sign-Up Button -->
+          <button type="submit" class="btn submit-btn">Sign Up</button>
+        </form>
+        <p class="login-text">Already have an account? <a href="#">Login</a></p>
+      </div>
+    </div>
+    <script src="sign_up.js"></script>
+  </body>
+</html>

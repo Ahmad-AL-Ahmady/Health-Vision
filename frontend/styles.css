@@ -1,0 +1,194 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #c0dcee; /* Blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  background-color: #fff; /* White form background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Left Section */
+.left {
+  flex: 1;
+  position: relative;
+  background-image: url("image.jpg"); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.left > * {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+/* Right Section */
+.right {
+  flex: 1;
+  padding: 40px 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+
+/* LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Adds space below the logo and text */
+}
+
+.logo {
+  width: 60px; /* Adjust the logo size */
+  text-align: center;
+
+  height: auto;
+  border-radius: 5%;
+}
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #072b50d6;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Form Styles */
+h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.icon-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon-input i {
+  position: absolute;
+  left: 10px;
+  color: #7f8c8d;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  padding-left: 35px; /* Add space for the icon */
+  font-size: 14px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Buttons */
+.btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.submit-btn {
+  margin-top: 15px;
+}
+
+.location-btn {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.location-btn i {
+  font-size: 16px;
+}
+
+/* Location Display */
+.location-display {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+/* Hidden Elements */
+.hidden {
+  display: none;
+}
+
+/* Login Text */
+.login-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}

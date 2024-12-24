@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Sign-Up Page</title>
+  <title>Sign-Up - Health Vision</title>
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -71,6 +73,23 @@
       <p class="login-text">Already have an account? <a href="login">Login</a></p>
     </div>
   </div>
+
+  <!-- Map Popup -->
+  <div id="map-popup" class="map-popup hidden">
+    <div class="map-container">
+      <div id="map"></div>
+      <button id="getCurrentLocation" class="btn location-btn">
+        <i class="fas fa-crosshairs"></i> Get Current Location
+      </button>
+      <button id="confirmLocation" class="btn confirm-location-btn">
+        <i class="fas fa-check"></i> Confirm Location
+      </button>
+      <button id="closeMap" class="btn close-map-btn">
+        <i class="fas fa-times"></i> Close
+      </button>
+    </div>
+  </div>
+
   <script src="../js/sign_up.js"></script>
 </body>
 

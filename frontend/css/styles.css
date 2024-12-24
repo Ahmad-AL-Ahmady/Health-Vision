@@ -201,3 +201,169 @@ button:focus {
 .login-text a:hover {
   text-decoration: underline;
 }
+
+/* ====================================== */
+
+/* Success Page Styling */
+.success-content {
+  text-align: center;
+  padding: 40px;
+  background: none;
+  box-shadow: none;
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #27ae60;
+  margin: 20px 0;
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.success-content h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.success-content p {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-container {
+  margin-top: 30px;
+}
+
+.proceed-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.proceed-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.proceed-btn i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.proceed-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Update logo container for success page */
+.success-content .logo-container {
+  margin-bottom: 30px;
+}
+
+.success-content .logo {
+  width: 70px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.success-content .logo-text {
+  font-size: 28px;
+}
+
+/* Map Styling */
+.map-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.map-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.confirm-location-btn {
+  margin-right: 10px;
+  background-color: #27ae60;
+}
+
+.close-map-btn {
+  background-color: #e74c3c;
+}
+
+.location-btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #3498db;
+}
+
+.location-btn:hover {
+  background-color: #2980b9;
+}
+
+.map-container button {
+  margin: 5px;
+}
+
+#getCurrentLocation {
+  background-color: #2ecc71;
+}
+
+#getCurrentLocation:hover {
+  background-color: #27ae60;
+}
+
+.hidden {
+  display: none;
+}

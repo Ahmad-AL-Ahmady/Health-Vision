@@ -1,16 +1,19 @@
-const dotenv = require("dotenv");
-dotenv.config({ path: "./backend/.env" });
-
 const app = require("./app");
+const mongoose = require("mongoose");
 
 const port = process.env.PORT || 3000;
 
-const DB = process.env.DATABASE.replace(
-  "<PASSWORD>",
-  process.env.DATABASE_PASSWORD
-);
+// تأكد من وجود المتغيرات قبل استخدامها
+const DB = process.env.DATABASE
+  ? process.env.DATABASE.replace("<PASSWORD>", process.env.DATABASE_PASSWORD)
+  : "";
 
-const mongoose = require("mongoose");
+// اضف console.log للتحقق من القيم
+console.log("Checking environment variables:");
+console.log("DATABASE exists:", !!process.env.DATABASE);
+console.log("DATABASE_PASSWORD exists:", !!process.env.DATABASE_PASSWORD);
+console.log("Final DB string:", DB);
+
 mongoose
   .connect(DB)
   .then(() => console.log("DB connection successful!"))
